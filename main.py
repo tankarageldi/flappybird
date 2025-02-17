@@ -8,6 +8,8 @@ WINDOW_WIDTH = 500
 WINDOW_HEIGHT = 800
 FPS = 60
 
+tan = 10 
+
 BIRD_IMGS=[pygame.transform.scale2x(pygame.image.load(os.path.join("img","bird1.png"))),pygame.transform.scale2x(pygame.image.load(os.path.join("img","bird2.png"))),pygame.transform.scale2x(pygame.image.load(os.path.join("img","bird3.png")))]
 PIPE_IMG=pygame.transform.scale2x(pygame.image.load(os.path.join("img","pipe.png")))
 BASE_IMG=pygame.transform.scale2x(pygame.image.load(os.path.join("img","base.png")))
