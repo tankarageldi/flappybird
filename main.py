@@ -1,7 +1,6 @@
 import pygame
 import time
 import random
-import neat
 import os
 pygame.font.init()
 WINDOW_WIDTH = 500
