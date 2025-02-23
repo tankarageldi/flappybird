@@ -6,7 +6,7 @@ import population
 
 pygame.init()
 clock = pygame.time.Clock()
-population = population.Population()
+population = population.Population(100)
 
 def genereate_pipes():
     config.pipes.append(components.Pipes(config.win_width))
@@ -41,7 +41,10 @@ def main():
             if p.off_screen:
                 config.pipes.remove(p)
         
-        population.update_live_players()
+        if not population.extinct():
+            population.update_live_players()
+        else:
+            pass
         clock.tick(60)
         pygame.display.flip()
 
