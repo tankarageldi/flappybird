@@ -1,9 +1,14 @@
+import sys
+import os
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
+
 import pygame
 from sys import exit
 import config
 import components
 import population 
-
+ 
 pygame.init()
 clock = pygame.time.Clock()
 population = population.Population(100)
@@ -44,7 +49,8 @@ def main():
         if not population.extinct():
             population.update_live_players()
         else:
-            pass
+            config.pipes.clear()
+            population.natural_selection()
         clock.tick(60)
         pygame.display.flip()
 
